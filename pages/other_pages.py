@@ -1,10 +1,13 @@
-from base import BasePage
-from locators import Locators
+from pages.base import BasePage
+from pages.locators import Locators
 from selenium.common.exceptions import TimeoutException
 import time
 
 
 class OtherPage(BasePage):
+    def page_is_loaded(self):
+        time.sleep(2)
+
     def get_h3(self):
         item_list = self.find_elements(Locators.PAGE_H3)
         headers_list = [item.text for item in item_list]
@@ -20,7 +23,15 @@ class OtherPage(BasePage):
 
     def scroll_to_contact_us(self):
         element = self.find_element(Locators.ANY_QUESTIONS_BLOCK)
-        return self.driver.execute_script("arguments[0].scrollIntoView();", element)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
+        time.sleep(2)
+
+    def scroll_to_second_block(self):
+        element = self.find_element(Locators.SECOND_BLOCK)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    def scroll_to_page_end(self):
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
     def get_link_contact_us(self):
         contact_us = self.find_element(Locators.CONTACT_US_BUTTON)

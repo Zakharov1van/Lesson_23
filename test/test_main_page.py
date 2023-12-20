@@ -1,29 +1,31 @@
 from pages.main_page import MainPage
 
+url = "https://delassus.com/en/"
+
 
 def test_accept_cookies(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     assert page.check_cookies_block_closed() is True
 
 
 def test_refuse_cookies(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.refuse_cookies()
     assert page.check_cookies_block_closed() is True
 
 
 def test_learn_more(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.click_learn_more()
     assert page.current_url() == "https://delassus.com/en/legals"
 
 
 def test_skip_video(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -31,7 +33,7 @@ def test_skip_video(browser):
 
 
 def test_slider_names(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -39,7 +41,7 @@ def test_slider_names(browser):
 
 
 def test_ru_button(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -48,7 +50,7 @@ def test_ru_button(browser):
 
 
 def test_legals_button(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -57,7 +59,7 @@ def test_legals_button(browser):
 
 
 def test_replay_video_button(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -66,7 +68,7 @@ def test_replay_video_button(browser):
 
 
 def test_replay_video_is_closed(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -76,7 +78,7 @@ def test_replay_video_is_closed(browser):
 
 
 def test_discover_button_tomatoes(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -86,7 +88,7 @@ def test_discover_button_tomatoes(browser):
 
 
 def test_discover_button_citrus(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -96,7 +98,7 @@ def test_discover_button_citrus(browser):
 
 
 def test_discover_button_grapes(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -106,7 +108,7 @@ def test_discover_button_grapes(browser):
 
 
 def test_discover_button_avocados(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()
@@ -116,7 +118,7 @@ def test_discover_button_avocados(browser):
 
 
 def test_discover_button_flowers(browser):
-    page = MainPage(browser)
+    page = MainPage(browser, url)
     page.go_to_site()
     page.accept_cookies()
     page.skip_video()

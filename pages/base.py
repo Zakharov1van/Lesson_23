@@ -4,9 +4,10 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class BasePage:
 
-    def __init__(self, driver):
+    def __init__(self, driver, base_url):
         self.driver = driver
-        self.base_url = "https://delassus.com/en/"
+        # self.base_url = "https://delassus.com/en/"
+        self.base_url = base_url
         self.driver.implicitly_wait(10)
 
     def find_element(self, locator, time=10):

@@ -14,8 +14,11 @@ class Locators:
     SOUND_BUTTON = (By.XPATH, "//button[@class = 'o-B o-BCircle js-show']")
     INTRO_IS_OVER = (By.XPATH, "//div[@class = 'c-Intro u-fixed u-post-tl u-fit u-hidden']")
     DROPDOWN_MENU_OPEN = (By.XPATH, "//button[@class = 'o-B o-BBurger']")
+    DROPDOWN_MENU_IS_OPEN = (By.XPATH, "//div[@style = 'visibility: visible;']")
     DROPDOWN_MENU_CLOSE = (By.XPATH, "//button[@class = 'o-B o-BClose']")
     DROPDOWN_ITEMS = (By.XPATH, "//li[@class = 'js-it']")
+    DROPDOWN_MAIN_ITEMS = (By.XPATH, "//a[contains(@class, 'o-B o-BS o-BS-invert js-btn')]")
+    DROPDOWN_SUB_ITEMS = (By.XPATH, "//a[contains(@class, 'o-B o-BS o-BSubProduct o-BS-invert js-btn')]")
     SLIDER_ITEMS = (By.XPATH, "//span[@class = 'o-P1 -L js-l']")
     SLIDER_TOMATOES = (By.XPATH, "//button[@data-id = 'tomatoes']")
     SLIDER_CITRUS = (By.XPATH, "//button[@data-id = 'citrus']")
@@ -32,8 +35,9 @@ class Locators:
     PAGE_H2 = (By.XPATH, "//h2")
     PAGE_PRODUCT_BLOCK = (By.XPATH, "//a[@data-id = 'card']")
     ANY_QUESTIONS_BLOCK = (By.XPATH, "//div[@class = 'l-S l-S--l ']")
+    SECOND_BLOCK = (By.XPATH, "//div[@class = 'l-IC']")
     CONTACT_US_BUTTON = (By.XPATH, "//a[@data-btn = 'contact']")
-    LOGO = (By.XPATH, "//div[@class = 'o-Logo']")
+    LOGO = (By.XPATH, "//a[@class = 'o-B']")
 
 
 class DropdownMenu(BasePage):
