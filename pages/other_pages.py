@@ -1,11 +1,11 @@
 from pages.base import BasePage
 from pages.locators import Locators
-from selenium.common.exceptions import TimeoutException
 import time
 
 
 class OtherPage(BasePage):
-    def page_is_loaded(self):
+    @staticmethod
+    def page_is_loaded():
         time.sleep(2)
 
     def get_h3(self):
